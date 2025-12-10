@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시내모바일 - 공신폰</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 헤더 -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="시내모바일 로고" class="logo-img">
+            </div>
+            <nav class="nav">
+                <a href="#product">상품정보</a>
+                <a href="#consultation">상담문의</a>
+                <a href="#contact">문의하기</a>
+            </nav>
+            <!-- 메뉴 버튼 (모바일 + 데스크탑) -->
+            <button class="menu-btn" id="menuBtn">
+                <span>MENU</span>
+                <span class="menu-icon">☰</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- 메뉴 패널 (모바일 + 데스크탑) -->
+    <div class="menu-panel" id="menuPanel">
+        <div class="menu-panel-header">
+            <img src="logo.png" alt="시내모바일 로고" class="menu-logo-img">
+            <button class="menu-close" id="menuClose">×</button>
+        </div>
+        <nav class="menu-nav">
+            <a href="#product" class="menu-nav-link">상품정보</a>
+            <a href="#consultation" class="menu-nav-link">상담문의</a>
+            <a href="#contact" class="menu-nav-link">문의하기</a>
+        </nav>
+    </div>
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- 이미지 섹션 (h-1 ~ h-8) -->
+    <section class="image-sections">
+        <!-- 인증 배지 (데스크탑만, 화면 왼쪽 끝) -->
+        <div class="cert-badge-absolute">
+            <img src="associ.png" alt="한국정보통신진흥협회 인증" class="cert-badge-img">
+        </div>
+        <div class="container">
+            <div class="image-content-wrapper">
+                <div class="image-list">
+                    <div class="image-item first-image-wrapper">
+                        <img src="images/section/h-1.png" alt="공신폰 소개 1" class="first-image">
+                        <!-- 첫 번째 이미지 오른쪽 패널 (데스크탑만) -->
+                        <div class="fixed-panel" id="fixedPanel">
+                            <div class="fixed-panel-content">
+                                <!-- 특별 사은품 배너 -->
+                                <div class="gift-banner">
+                                    <div class="gift-banner-content">
+                                        <span class="gift-stars">⭐ ⭐</span>
+                                        <span class="gift-text">시내모바일 구매 고객님께 드리는 특별 사은품</span>
+                                        <span class="gift-icon">🎁</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- 상품 및 선물 -->
+                                <div class="gift-items">
+                                    <div class="gift-item">
+                                        <div class="gift-illustration">
+                                            <img src="gongsin.png" alt="공신폰 선물 set" class="gongsin-image">
+                                        </div>
+                                        <div class="gift-label">공신폰 선물 set</div>
+                                    </div>
+                                    <div class="gift-item">
+                                        <div class="gift-badge">선착순 ❤️</div>
+                                        <div class="gift-watch">⌚</div>
+                                        <div class="gift-label">키즈워치 증정</div>
+                                    </div>
+                                </div>
+                                
+                                <!-- 가격 정보 -->
+                                <div class="price-box">
+                                    <div class="price-header">
+                                        <span>총 할부원금</span>
+                                        <span class="price-amount">19,000원 <span class="price-arrow">▼</span></span>
+                                    </div>
+                                    <div class="price-details">
+                                        <div class="price-row">
+                                            <span>출고가</span>
+                                            <span>319,000원</span>
+                                        </div>
+                                        <div class="price-row">
+                                            <span>즉시할인</span>
+                                            <span class="price-discount">- 220,000원</span>
+                                        </div>
+                                        <div class="price-row">
+                                            <span>2년약정할인</span>
+                                            <span class="price-discount">- 80,000원</span>
+                                        </div>
+                                    </div>
+                                    <div class="price-footer">
+                                        <span>일시불 구매 1회</span>
+                                        <span class="price-final">19,000원</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- 경고 메시지 -->
+                                <div class="warning-box">
+                                    <div class="warning-icons">🚨 🚨</div>
+                                    <div class="warning-text">유사제품 강력주의</div>
+                                    <div class="warning-subtext">
+                                        아래 제품 상세페이지를 <span class="warning-emphasis">꼭!</span> <span class="warning-underline">확인해주세요!</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- 미니 문의폼 -->
+                                <div class="mini-form">
+                                    <h3>빠른 문의</h3>
+                                    <form class="mini-contact-form" id="miniContactForm">
+                                        <div class="mini-form-group">
+                                            <input type="text" placeholder="이름" required>
+                                        </div>
+                                        <div class="mini-form-group">
+                                            <input type="tel" placeholder="전화번호" required>
+                                        </div>
+                                        <div class="mini-form-group">
+                                            <textarea placeholder="문의내용" rows="3" required></textarea>
+                                        </div>
+                                        <button type="submit" class="mini-submit-btn">신청하기 ❤️</button>
+                                    </form>
+                                </div>
+                                
+                                <!-- 액션 버튼 -->
+                                <div class="action-buttons">
+                                    <button class="apply-btn">신청하기 ❤️</button>
+                                    <button class="consult-btn">1:1 상담 🎧</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-item">
+                        <img src="images/section/h-2.gif" alt="공신폰 소개 2">
+                    </div>
+                    <div class="image-item">
+                        <img src="images/section/h-3.png" alt="공신폰 소개 3">
+                    </div>
+                    <div class="image-item">
+                        <img src="images/section/h-4.png" alt="공신폰 소개 4">
+                    </div>
+                    <div class="image-item">
+                        <img src="images/section/h-5.png" alt="공신폰 소개 5">
+                    </div>
+                    <div class="image-item">
+                        <img src="images/section/h-6.png" alt="공신폰 소개 6">
+                    </div>
+                    <div class="image-item">
+                        <img src="images/section/h-7.png" alt="공신폰 소개 7">
+                    </div>
+                    <div class="image-item">
+                        <img src="images/section/h-8.png" alt="공신폰 소개 8">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 실시간 상담 섹션 -->
+    <section id="consultation" class="realtime-consultation">
+        <div class="container">
+            <h2 class="section-title">실시간 상담</h2>
+            <div class="consultation-wrapper">
+                <div class="consultation-box" id="consultationBox">
+                    <!-- 더미 데이터가 여기에 동적으로 추가됩니다 -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 문의 섹션 -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">문의하기</h2>
+            <form class="contact-form" id="contactForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">이름 <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" required placeholder="이름을 입력해주세요">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">전화번호 <span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" required placeholder="010-0000-0000">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="subject">문의유형 <span class="required">*</span></label>
+                    <select id="subject" name="subject" required>
+                        <option value="">선택해주세요</option>
+                        <option value="product">상품 문의</option>
+                        <option value="price">가격 문의</option>
+                        <option value="delivery">배송 문의</option>
+                        <option value="as">A/S 문의</option>
+                        <option value="other">기타 문의</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">문의내용 <span class="required">*</span></label>
+                    <textarea id="message" name="message" rows="6" required placeholder="문의하실 내용을 자세히 입력해주세요"></textarea>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="privacy" name="privacy" required>
+                    <label for="privacy">개인정보 수집 및 이용에 동의합니다. <span class="required">*</span></label>
+                </div>
+                <button type="submit" class="submit-btn">문의하기</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>시내모바일</h3>
+                    <p>대표: 이준우</p>
+                    <p>대표전화: 1899-4536</p>
+                    <p>팩스: 02-465-4536</p>
+                    <p>사업자등록번호: 578-88-01311</p>
+                    <p>통신판매업 신고: 제2019-서울광진-0468호</p>
+                    <p>주소: 서울특별시 광진구 군자로 70, 2층</p>
+                    <p>개인정보보호책임자: 이준우</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#product">상품정보</a>
+                    <a href="#consultation">상담문의</a>
+                    <a href="#contact">문의하기</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 시내모바일. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 고정 하단 문의폼 띠지 (데스크탑) -->
+    <div class="fixed-inquiry-bar" id="fixedInquiryBar">
+        <div class="inquiry-bar-content">
+            <div class="inquiry-bar-logo">
+                <img src="logo.png" alt="시내모바일 로고" class="inquiry-logo-img">
+            </div>
+            <form class="inquiry-bar-form" id="inquiryBarForm">
+                <input type="text" placeholder="이름" required>
+                <input type="tel" placeholder="전화번호" required>
+                <textarea placeholder="문의내용" rows="1" required></textarea>
+                <button type="submit" class="inquiry-submit-btn">신청하기</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- 모바일 하단 고정 버튼 -->
+    <div class="mobile-fixed-buttons">
+        <button class="mobile-kakao-btn">카카오톡 상담</button>
+        <button class="mobile-consult-btn">1:1 상담신청</button>
+    </div>
+
+    <!-- TOP 버튼 -->
+    <button class="top-btn" id="topBtn">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
