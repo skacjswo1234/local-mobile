@@ -49,9 +49,20 @@ body {
 }
 
 .logo-img {
-    height: 60px;
     width: auto;
     object-fit: contain;
+}
+
+.logo-desktop {
+    display: block;
+    width: 140px;
+    height: 40px;
+}
+
+.logo-mobile {
+    display: none;
+    width: 120px;
+    height: 32px;
 }
 
 .nav {
@@ -162,9 +173,20 @@ body {
 }
 
 .menu-logo-img {
-    height: 60px;
     width: auto;
     object-fit: contain;
+}
+
+.menu-logo-desktop {
+    display: block;
+    width: 140px;
+    height: 40px;
+}
+
+.menu-logo-mobile {
+    display: none;
+    width: 120px;
+    height: 32px;
 }
 
 .menu-close {
@@ -683,7 +705,7 @@ body {
 .cert-badge-absolute {
     display: none;
     position: fixed;
-    left: 0;
+    left: 20px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 100;
@@ -691,7 +713,7 @@ body {
 
 .cert-badge-img {
     width: auto;
-    height: 150px;
+    height: 225px;
     object-fit: contain;
 }
 
@@ -1039,6 +1061,20 @@ body {
         display: block;
     }
     
+    .logo-desktop,
+    .menu-logo-desktop,
+    .inquiry-logo-desktop,
+    .footer-logo-desktop {
+        display: block;
+    }
+    
+    .logo-mobile,
+    .menu-logo-mobile,
+    .inquiry-logo-mobile,
+    .footer-logo-mobile {
+        display: none;
+    }
+    
     .first-image-wrapper {
         flex-direction: row;
         position: relative;
@@ -1346,10 +1382,25 @@ body {
     margin-bottom: 30px;
 }
 
-.footer-info h3 {
-    font-size: 24px;
+.footer-logo {
     margin-bottom: 20px;
-    color: #333;
+}
+
+.footer-logo-img {
+    width: auto;
+    object-fit: contain;
+}
+
+.footer-logo-desktop {
+    display: block;
+    width: 140px;
+    height: 40px;
+}
+
+.footer-logo-mobile {
+    display: none;
+    width: 120px;
+    height: 32px;
 }
 
 .footer-info p {
@@ -1388,8 +1439,36 @@ body {
         position: relative;
     }
 
-    .logo-img {
-        height: 50px;
+    .logo-desktop {
+        display: none;
+    }
+    
+    .logo-mobile {
+        display: block;
+    }
+    
+    .menu-logo-desktop {
+        display: none;
+    }
+    
+    .menu-logo-mobile {
+        display: block;
+    }
+    
+    .inquiry-logo-desktop {
+        display: none;
+    }
+    
+    .inquiry-logo-mobile {
+        display: block;
+    }
+    
+    .footer-logo-desktop {
+        display: none;
+    }
+    
+    .footer-logo-mobile {
+        display: block;
     }
     
     .menu-btn {
@@ -1514,9 +1593,20 @@ body {
 }
 
 .inquiry-logo-img {
-    height: 60px;
     width: auto;
     object-fit: contain;
+}
+
+.inquiry-logo-desktop {
+    display: block;
+    width: 140px;
+    height: 40px;
+}
+
+.inquiry-logo-mobile {
+    display: none;
+    width: 120px;
+    height: 32px;
 }
 
 .inquiry-bar-form {
