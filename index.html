@@ -51,116 +51,97 @@
         </div>
         <div class="container">
             <div class="image-content-wrapper">
-                <div class="image-list">
-                    <div class="image-item first-image-wrapper">
-                        <img src="images/section/h-1.png" alt="공신폰 소개 1" class="first-image">
-                        <!-- 첫 번째 이미지 오른쪽 패널 (데스크탑만) -->
-                        <div class="fixed-panel" id="fixedPanel">
-                            <div class="fixed-panel-content">
-                                <!-- 특별 사은품 배너 -->
-                                <div class="gift-banner">
-                                    <div class="gift-banner-content">
-                                        <span class="gift-stars">⭐ ⭐</span>
-                                        <span class="gift-text">시내모바일 구매 고객님께 드리는 특별 사은품</span>
-                                        <span class="gift-icon">🎁</span>
+                <div class="main-layout">
+                    <!-- 왼쪽: 이미지 리스트 -->
+                    <div class="image-list">
+                        <div class="image-item">
+                            <img src="images/section/h-1.png" alt="공신폰 소개 1">
+                        </div>
+                        <div class="image-item">
+                            <img src="images/section/h-2.gif" alt="공신폰 소개 2">
+                        </div>
+                        <div class="image-item">
+                            <img src="images/section/h-3.png" alt="공신폰 소개 3">
+                        </div>
+                        <div class="image-item">
+                            <img src="images/section/h-4.png" alt="공신폰 소개 4">
+                        </div>
+                        <div class="image-item">
+                            <img src="images/section/h-5.png" alt="공신폰 소개 5">
+                        </div>
+                        <div class="image-item">
+                            <img src="images/section/h-6.png" alt="공신폰 소개 6">
+                        </div>
+                        
+                        <!-- 광고-숏폼-차단영상 섹션 -->
+                        <div class="video-section">
+                            <h3 class="video-section-title">광고-숏폼-차단영상</h3>
+                            <div class="video-wrapper">
+                                <video class="section-video" controls>
+                                    <source src="ad-shot-x.mp4" type="video/mp4">
+                                    브라우저가 비디오 태그를 지원하지 않습니다.
+                                </video>
+                            </div>
+                        </div>
+                        
+                        <!-- URL 차단영상 섹션 -->
+                        <div class="video-section">
+                            <h3 class="video-section-title">URL 차단영상</h3>
+                            <div class="video-wrapper">
+                                <video class="section-video" controls>
+                                    <source src="url-x.mp4" type="video/mp4">
+                                    브라우저가 비디오 태그를 지원하지 않습니다.
+                                </video>
+                            </div>
+                        </div>
+                        
+                        <div class="image-item">
+                            <img src="images/section/h-7.png" alt="공신폰 소개 7">
+                        </div>
+                        <div class="image-item">
+                            <img src="images/section/h-8.png" alt="공신폰 소개 8">
+                        </div>
+                    </div>
+                    
+                    <!-- 오른쪽: 사이드 탭 (데스크탑만) -->
+                    <div class="side-tab">
+                        <div class="side-tab-content">
+                            <!-- 사이드 탭 이미지 -->
+                            <div class="side-tab-image">
+                                <img src="sidetab.gif" alt="사이드 탭">
+                            </div>
+                            
+                            <!-- 실시간 상담 문의 폼 -->
+                            <div class="side-consult-form">
+                                <form class="side-contact-form" id="sideContactForm">
+                                    <div class="side-form-group">
+                                        <input type="text" placeholder="이름" required>
                                     </div>
-                                </div>
-                                
-                                <!-- 상품 및 선물 -->
-                                <div class="gift-items">
-                                    <div class="gift-item">
-                                        <div class="gift-illustration">
-                                            <img src="gongsin.png" alt="공신폰 선물 set" class="gongsin-image">
-                                        </div>
-                                        <div class="gift-label">공신폰 선물 set</div>
+                                    <div class="side-form-group">
+                                        <input type="tel" placeholder="전화번호" required>
                                     </div>
-                                    <div class="gift-item">
-                                        <div class="gift-badge">선착순 ❤️</div>
-                                        <div class="gift-watch">⌚</div>
-                                        <div class="gift-label">키즈워치 증정</div>
+                                    <div class="side-form-group">
+                                        <select required>
+                                            <option value="">문의유형 선택</option>
+                                            <option value="product">상품 문의</option>
+                                            <option value="price">가격 문의</option>
+                                            <option value="delivery">배송 문의</option>
+                                            <option value="as">A/S 문의</option>
+                                            <option value="other">기타 문의</option>
+                                        </select>
                                     </div>
-                                </div>
-                                
-                                <!-- 가격 정보 -->
-                                <div class="price-box">
-                                    <div class="price-header">
-                                        <span>총 할부원금</span>
-                                        <span class="price-amount">19,000원 <span class="price-arrow">▼</span></span>
+                                    <div class="side-form-group">
+                                        <textarea placeholder="문의내용" rows="4" required></textarea>
                                     </div>
-                                    <div class="price-details">
-                                        <div class="price-row">
-                                            <span>출고가</span>
-                                            <span>319,000원</span>
-                                        </div>
-                                        <div class="price-row">
-                                            <span>즉시할인</span>
-                                            <span class="price-discount">- 220,000원</span>
-                                        </div>
-                                        <div class="price-row">
-                                            <span>2년약정할인</span>
-                                            <span class="price-discount">- 80,000원</span>
-                                        </div>
-                                    </div>
-                                    <div class="price-footer">
-                                        <span>일시불 구매 1회</span>
-                                        <span class="price-final">19,000원</span>
-                                    </div>
-                                </div>
-                                
-                                <!-- 경고 메시지 -->
-                                <div class="warning-box">
-                                    <div class="warning-icons">🚨 🚨</div>
-                                    <div class="warning-text">유사제품 강력주의</div>
-                                    <div class="warning-subtext">
-                                        아래 제품 상세페이지를 <span class="warning-emphasis">꼭!</span> <span class="warning-underline">확인해주세요!</span>
-                                    </div>
-                                </div>
-                                
-                                <!-- 미니 문의폼 -->
-                                <div class="mini-form">
-                                    <h3>빠른 문의</h3>
-                                    <form class="mini-contact-form" id="miniContactForm">
-                                        <div class="mini-form-group">
-                                            <input type="text" placeholder="이름" required>
-                                        </div>
-                                        <div class="mini-form-group">
-                                            <input type="tel" placeholder="전화번호" required>
-                                        </div>
-                                        <div class="mini-form-group">
-                                            <textarea placeholder="문의내용" rows="3" required></textarea>
-                                        </div>
-                                        <button type="submit" class="mini-submit-btn">신청하기 ❤️</button>
-                                    </form>
-                                </div>
+                                </form>
                                 
                                 <!-- 액션 버튼 -->
-                                <div class="action-buttons">
-                                    <button class="apply-btn">신청하기 ❤️</button>
-                                    <button class="consult-btn">1:1 상담 🎧</button>
+                                <div class="side-action-buttons">
+                                    <button class="side-apply-btn">신청하기 ❤️</button>
+                                    <button class="side-consult-btn">1:1 상담 🎧</button>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="image-item">
-                        <img src="images/section/h-2.gif" alt="공신폰 소개 2">
-                    </div>
-                    <div class="image-item">
-                        <img src="images/section/h-3.png" alt="공신폰 소개 3">
-                    </div>
-                    <div class="image-item">
-                        <img src="images/section/h-4.png" alt="공신폰 소개 4">
-                    </div>
-                    <div class="image-item">
-                        <img src="images/section/h-5.png" alt="공신폰 소개 5">
-                    </div>
-                    <div class="image-item">
-                        <img src="images/section/h-6.png" alt="공신폰 소개 6">
-                    </div>
-                    <div class="image-item">
-                        <img src="images/section/h-7.png" alt="공신폰 소개 7">
-                    </div>
-                    <div class="image-item">
-                        <img src="images/section/h-8.png" alt="공신폰 소개 8">
                     </div>
                 </div>
             </div>
@@ -271,6 +252,21 @@
 
     <!-- TOP 버튼 -->
     <button class="top-btn" id="topBtn">↑</button>
+
+    <!-- 하단 고정 아이콘 -->
+    <div class="fixed-contact-icons">
+        <a href="tel:1899-4536" class="contact-icon phone-icon" title="전화하기">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/>
+            </svg>
+        </a>
+        <a href="https://naver.me/IgTceGEH" target="_blank" class="contact-icon naver-icon" title="네이버 블로그">
+            <span style="font-size: 24px;">📝</span>
+        </a>
+        <a href="http://pf.kakao.com/_uwgbC/chat" target="_blank" class="contact-icon kakao-icon" title="카카오톡 상담">
+            <span style="font-size: 24px;">💬</span>
+        </a>
+    </div>
 
     <script src="script.js"></script>
 </body>

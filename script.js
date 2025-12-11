@@ -229,6 +229,37 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // 사이드 탭 문의 폼 제출 처리
+    const sideContactForm = document.getElementById('sideContactForm');
+    if (sideContactForm) {
+        sideContactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('문의가 접수되었습니다. 빠른 시일 내에 연락드리겠습니다.');
+            sideContactForm.reset();
+        });
+    }
+
+    // 사이드 탭 액션 버튼
+    const sideApplyBtn = document.querySelector('.side-apply-btn');
+    if (sideApplyBtn) {
+        sideApplyBtn.addEventListener('click', function() {
+            const contactSection = document.getElementById('contact');
+            if (contactSection) {
+                contactSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    }
+
+    const sideConsultBtn = document.querySelector('.side-consult-btn');
+    if (sideConsultBtn) {
+        sideConsultBtn.addEventListener('click', function() {
+            alert('1:1 상담으로 연결됩니다.');
+        });
+    }
+
 
     // 메뉴 토글 (모바일 + 데스크탑)
     const menuBtn = document.getElementById('menuBtn');

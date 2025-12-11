@@ -695,18 +695,160 @@ body {
 
 .image-content-wrapper {
     position: relative;
+    width: 100%;
+}
+
+.main-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: static;
+    width: 100%;
 }
 
 .image-list {
     display: flex;
     flex-direction: column;
+    flex: 1;
+    position: static;
+}
+
+/* 오른쪽 사이드 탭 (데스크탑만) */
+.side-tab {
+    display: none;
+    width: 100%;
+    background-color: #fff;
+    min-height: 400px;
+    box-shadow: -5px 0 20px rgba(0,0,0,0.1);
+    position: static;
+}
+
+.side-tab-content {
+    padding: 0;
+    position: relative;
+}
+
+/* 사이드 탭 이미지 */
+.side-tab-image {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.side-tab-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 실시간 상담 문의 폼 */
+.side-consult-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 0;
+}
+
+.side-contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.side-form-group {
+    width: 100%;
+}
+
+.side-form-group input,
+.side-form-group select,
+.side-form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+}
+
+.side-form-group input:focus,
+.side-form-group select:focus,
+.side-form-group textarea:focus {
+    outline: none;
+    border-color: #ffd700;
+}
+
+.side-form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.side-submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #ffd700;
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.side-submit-btn:hover {
+    background-color: #ffed4e;
+}
+
+/* 액션 버튼 */
+.side-action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.side-apply-btn {
+    flex: 1;
+    padding: 15px;
+    background-color: #ffd700;
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.side-apply-btn:hover {
+    background-color: #ffed4e;
+}
+
+.side-consult-btn {
+    flex: 1;
+    padding: 15px;
+    background-color: #8B4513;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.side-consult-btn:hover {
+    background-color: #A0522D;
 }
 
 .cert-badge-absolute {
     display: none;
     position: fixed;
-    left: 20px;
-    top: 50%;
+    left: 80px;
+    top: 35%;
     transform: translateY(-50%);
     z-index: 100;
 }
@@ -715,19 +857,6 @@ body {
     width: auto;
     height: 225px;
     object-fit: contain;
-}
-
-.first-image-wrapper {
-    position: relative;
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    width: 100%;
-    flex-wrap: nowrap;
-}
-
-.first-image {
-    flex: 1;
 }
 
 .image-item {
@@ -749,311 +878,37 @@ body {
     vertical-align: top;
 }
 
-/* 첫 번째 이미지 오른쪽 고정 패널 (데스크탑만) */
-.fixed-panel {
-    display: none;
-    width: 600px;
+/* 비디오 섹션 */
+.video-section {
+    margin-bottom: 0;
+    text-align: center;
+    padding: 40px 20px;
     background-color: #fff;
-    padding: 30px;
-    box-shadow: -5px 0 20px rgba(0,0,0,0.1);
-    position: relative !important;
-    margin-left: 20px;
-    align-self: flex-start;
-    top: auto !important;
-    bottom: auto !important;
-    left: auto !important;
-    right: auto !important;
 }
 
-.fixed-panel-content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-/* 특별 사은품 배너 */
-.gift-banner {
-    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.gift-banner-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.video-section-title {
+    font-size: 24px;
     font-weight: bold;
-    font-size: 14px;
-}
-
-.gift-stars {
-    font-size: 18px;
-}
-
-.gift-text {
-    flex: 1;
-    text-align: center;
-}
-
-.gift-icon {
-    font-size: 20px;
-}
-
-/* 상품 및 선물 */
-.gift-items {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
+    color: #333;
     margin-bottom: 20px;
-}
-
-.gift-item {
     text-align: center;
-    padding: 20px;
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    border: 2px solid #ffd700;
 }
 
-.gift-illustration {
-    font-size: 50px;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.gongsin-image {
+.video-wrapper {
     max-width: 100%;
+    margin: 0 auto;
+}
+
+.section-video {
+    width: 100%;
+    max-width: 800px;
     height: auto;
-    max-height: 150px;
-    object-fit: contain;
-}
-
-.gift-badge {
-    font-size: 12px;
-    color: #ff6b6b;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-.gift-watch {
-    font-size: 40px;
-    margin-bottom: 10px;
-}
-
-.gift-label {
-    font-size: 13px;
-    color: #333;
-    font-weight: bold;
-    background-color: #e3f2fd;
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-/* 가격 정보 */
-.price-box {
-    border: 3px solid #ffd700;
+    display: block;
+    margin: 0 auto;
     border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-.price-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 15px;
-    border-bottom: 2px solid #ffd700;
-    margin-bottom: 15px;
-}
-
-.price-header span:first-child {
-    font-weight: bold;
-    font-size: 14px;
-}
-
-.price-amount {
-    font-size: 24px;
-    font-weight: bold;
-    color: #ff6b6b;
-}
-
-.price-arrow {
-    font-size: 14px;
-    color: #333;
-}
-
-.price-details {
-    margin-bottom: 15px;
-}
-
-.price-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    font-size: 14px;
-}
-
-.price-row span:first-child {
-    color: #666;
-}
-
-.price-row span:last-child {
-    font-weight: bold;
-}
-
-.price-discount {
-    color: #ff6b6b;
-}
-
-.price-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 15px;
-    border-top: 2px solid #ffd700;
-    font-size: 14px;
-}
-
-.price-final {
-    font-size: 20px;
-    font-weight: bold;
-    color: #ff6b6b;
-}
-
-/* 경고 메시지 */
-.warning-box {
-    background-color: #fff3cd;
-    border: 2px solid #ffd700;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.warning-icons {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.warning-text {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.warning-subtext {
-    font-size: 14px;
-    color: #666;
-}
-
-.warning-emphasis {
-    color: #ff6b6b;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.warning-underline {
-    color: #ff6b6b;
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-/* 미니 문의폼 */
-.mini-form {
-    margin-bottom: 20px;
-}
-
-.mini-form h3 {
-    font-size: 18px;
-    margin-bottom: 15px;
-    color: #333;
-    text-align: center;
-}
-
-.mini-contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.mini-form-group input,
-.mini-form-group textarea {
-    width: 100%;
-    padding: 12px;
-    border: 2px solid #e0e0e0;
-    border-radius: 8px;
-    font-size: 14px;
-    font-family: inherit;
-    transition: border-color 0.3s;
-}
-
-.mini-form-group input:focus,
-.mini-form-group textarea:focus {
-    outline: none;
-    border-color: #ffd700;
-}
-
-.mini-submit-btn {
-    width: 100%;
-    padding: 15px;
-    background-color: #ffd700;
-    color: #333;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.mini-submit-btn:hover {
-    background-color: #ffed4e;
-}
-
-/* 액션 버튼 */
-.action-buttons {
-    display: flex;
-    gap: 10px;
-}
-
-.apply-btn {
-    flex: 1;
-    padding: 15px;
-    background-color: #ffd700;
-    color: #333;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.apply-btn:hover {
-    background-color: #ffed4e;
-}
-
-.consult-btn {
-    flex: 1;
-    padding: 15px;
-    background-color: #8B4513;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.consult-btn:hover {
-    background-color: #A0522D;
-}
 
 /* 데스크탑에서만 표시 */
 @media (min-width: 1024px) {
@@ -1075,26 +930,34 @@ body {
         display: none;
     }
     
-    .first-image-wrapper {
+    .main-layout {
         flex-direction: row;
-        position: relative;
         align-items: flex-start;
+        gap: 20px;
+        position: static;
     }
     
-    .fixed-panel {
+    .image-list {
+        flex: 1;
+        max-width: calc(100% - 520px);
+        position: static;
+    }
+    
+    .side-tab {
         display: block;
-        position: relative !important;
+        width: 500px;
+        flex-shrink: 0;
+        position: sticky;
+        top: 80px;
         align-self: flex-start;
-        top: auto !important;
-        bottom: auto !important;
-        left: auto !important;
-        right: auto !important;
-        transform: none !important;
+        max-height: calc(100vh - 100px);
+        overflow-y: auto;
     }
     
-    .first-image {
-        max-width: calc(100% - 620px);
+    .side-tab-content {
+        position: relative;
     }
+    
 }
 
 /* 실시간 상담 섹션 */
@@ -1734,6 +1597,63 @@ body {
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
+/* 하단 고정 아이콘 */
+.fixed-contact-icons {
+    position: fixed;
+    right: 30px;
+    bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 998;
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    text-decoration: none;
+}
+
+.phone-icon {
+    background-color: #03C75A;
+    color: #fff;
+}
+
+.phone-icon:hover {
+    background-color: #02B350;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.naver-icon {
+    background-color: #03C75A;
+    color: #fff;
+}
+
+.naver-icon:hover {
+    background-color: #02B350;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.kakao-icon {
+    background-color: #FEE500;
+    color: #000;
+}
+
+.kakao-icon:hover {
+    background-color: #FDD835;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
 /* 데스크탑에서만 고정 문의폼 표시 */
 @media (min-width: 1024px) {
     .fixed-inquiry-bar {
@@ -1744,8 +1664,12 @@ body {
         display: none;
     }
     
+    .fixed-contact-icons {
+        bottom: 100px;
+    }
+    
     .top-btn {
-        bottom: 120px;
+        bottom: 280px;
     }
 }
 
@@ -1759,12 +1683,27 @@ body {
         display: flex;
     }
     
-    .top-btn {
+    .fixed-contact-icons {
         bottom: 90px;
+        right: 20px;
+    }
+    
+    .top-btn {
+        bottom: 260px;
         right: 20px;
         width: 45px;
         height: 45px;
         font-size: 20px;
+    }
+    
+    .contact-icon {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .contact-icon svg {
+        width: 20px;
+        height: 20px;
     }
 }
 
