@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    overscroll-behavior-x: none;
+}
+
 body {
     font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', '맑은 고딕', sans-serif;
     background-color: #ffffff;
@@ -11,6 +18,7 @@ body {
     line-height: 1.6;
     font-weight: 700;
     overflow-x: hidden;
+    touch-action: pan-y;
 }
 
 * {
@@ -693,6 +701,19 @@ body {
     background-color: #fff;
     position: relative;
     overflow: hidden;
+}
+
+@media (max-width: 1023px) {
+    .image-sections .container {
+        padding: 0;
+        max-width: 100%;
+    }
+    
+    .image-content-wrapper,
+    .main-layout,
+    .image-list {
+        overflow-x: hidden;
+    }
 }
 
 .image-content-wrapper {
