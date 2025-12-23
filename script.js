@@ -256,7 +256,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const sideConsultBtn = document.querySelector('.side-consult-btn');
     if (sideConsultBtn) {
         sideConsultBtn.addEventListener('click', function() {
-            alert('1:1 상담으로 연결됩니다.');
+            window.open('https://open.kakao.com/o/sNyM4Ahf', '_blank');
         });
     }
 
@@ -357,8 +357,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileKakaoBtn = document.querySelector('.mobile-kakao-btn');
     if (mobileKakaoBtn) {
         mobileKakaoBtn.addEventListener('click', function() {
-            alert('카카오톡 상담으로 연결됩니다.');
-            // 실제 카카오톡 상담 링크로 변경 가능
+            window.open('https://open.kakao.com/o/sNyM4Ahf', '_blank');
         });
     }
 
